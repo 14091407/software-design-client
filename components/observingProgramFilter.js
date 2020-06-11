@@ -91,6 +91,7 @@ const ObservingProgramFilter = props => {
           <th>Year</th>
           <th>Size</th>
           <th>Weight</th>
+          <th></th>
         </tr>
         {_.range(0, list.length).map(value => (
         <tr key={`special-equipment-${value}`}>

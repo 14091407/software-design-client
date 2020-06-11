@@ -23,7 +23,8 @@ const SignIn = () => {
       alert('Something went wrong, please try again')
     }
     const data = await res.json()
-    Cookies.set('token', data)
+    console.log(data)
+    Cookies.set('token', data.token)
     window.location.href = '/'
   }
 

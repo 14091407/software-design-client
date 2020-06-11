@@ -15,15 +15,18 @@ module.exports = {
   },
 
   createSciPlan: async (body) => {
+    console.log(body)
     const res = await fetch(`${domain}/api/addsciplan`, {
       method: 'POST',
       body: JSON.stringify(body),
-      headers: { 
+      headers: {
         "Content-Type": "application/json",
-        "token": Cookies.get('token')
+        "token": "hello"
+        // {"token": Cookies.get('token')}
       },
     })
-    return res
+    console.log(res)
+    // return res
   },
 
   getSciPlan: async (body) => {
