@@ -180,11 +180,11 @@ const Create = () => {
     }
 
     const res = await createSciPlan(body)
-    // if (res.status != 200) {
-    //   alert('Something went wrong, please try again')
-    //   return
-    // }
-    // alert('Create Science Plan: Success')
+    if (res.status != 200) {
+      alert('Something went wrong, please try again')
+      return
+    }
+    alert('Create Science Plan: Success')
     // window.location.href = '/create'
   }
 
