@@ -176,7 +176,7 @@ const Create = () => {
       },
       specialEquipment: [...specialEquipment],
       exposures: [...specialEquipment],
-      lightDetectorOn: JSON.parse(lightDetectorOn)
+      lightDetectorOn: lightDetectorOn.toLowerCase() == 'true' ? true : false
     }
 
     const res = await createSciPlan(body)

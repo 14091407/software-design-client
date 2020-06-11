@@ -24,29 +24,18 @@ module.exports = {
       },
     })
     return res
+  },
+
+  getSciPlan: async (body) => {
+    const res = await fetch(`${domain}/api/getsciplan`, {
+      method: 'GET',
+      headers: {},
+    })
+    return res
   }
 }
 
 
-
-// signIn: async (body) => {
-//   const res = await fetch(`${domain}/api/login`, {
-//     method: 'POST',
-//     credentials: 'include',
-//     body: JSON.stringify(body),
-//     headers: { "Content-Type": "application/json" },
-//   })
-//   return res
-// },
-
-// createSciPlan: async (body) => {
-//   const res = await fetch(`${domain}/api/addsciplan`, {
-//     method: 'POST',
-//     body: JSON.stringify(body),
-//     headers: { "Content-Type": "application/json" },
-//   })
-//   return res
-// },
 
 // getSciPlan: async (body) => {
 //   const res = await fetch(`${domain}/api/getsciplan`, {
