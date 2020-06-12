@@ -23,8 +23,7 @@ module.exports = {
         "token": Cookies.get('token')
       },
     })
-    console.log(res)
-    // return res
+    return res
   },
 
   getSciPlan: async (body) => {

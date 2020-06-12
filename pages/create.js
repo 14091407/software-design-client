@@ -61,7 +61,7 @@ const Create = () => {
   })
   const [specialEquipment, setSpecialEquipment] = useState([])
   const [exposures, setExposures] = useState([])
-  const [lightDetectorOn, setLightDetectorOn] = useState(false)
+  const [lightDetectorOn, setLightDetectorOn] = useState('False')
 
   const handleOnChange = e => {
     const { name, value } = e.target
