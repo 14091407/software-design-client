@@ -40,6 +40,7 @@ const ObservingProgramFilter = props => {
     if (data.make == '' || data.model == '' || data.manufacturer == '' || data.year == '' || data.size == '' || data.weight =='') return
     props.handleOnChange({
       ...data,
+      year: parseInt(data.year),
       size: parseFloat(data.size),
       weight: parseFloat(data.weight)
     })
@@ -67,7 +68,7 @@ const ObservingProgramFilter = props => {
     {type: 'text', placeholder: 'Make', value: data.make, set: 'Data.make'},
     {type: 'text', placeholder: 'Model', value: data.model, set: 'Data.model'},
     {type: 'text', placeholder: 'Manufactuer', value: data.manufacturer, set: 'Data.manufacturer'},
-    {type: 'date', placeholder: 'Year', value: data.year, set: 'Data.year', label: 'Year'},
+    {type: 'number', placeholder: 'Year', value: data.year, set: 'Data.year'},
     {type: 'number', placeholder: 'Size', value: data.size, set: 'Data.size'},
     {type: 'number', placeholder: 'Weight', value: data.weight, set: 'Data.weight'},
   ].map(o => {
