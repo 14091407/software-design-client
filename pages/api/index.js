@@ -21,12 +21,10 @@ module.exports = {
       body: JSON.stringify(body),
       headers: {
         "Content-Type": "application/json",
-        "token": "hello"
-        // {"token": Cookies.get('token')}
+        "token": Cookies.get('token')
       },
     })
-    console.log(res)
-    // return res
+    return res
   },
 
   getSciPlan: async (body) => {

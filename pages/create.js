@@ -61,7 +61,7 @@ const Create = () => {
   })
   const [specialEquipment, setSpecialEquipment] = useState([])
   const [exposures, setExposures] = useState([])
-  const [lightDetectorOn, setLightDetectorOn] = useState(false)
+  const [lightDetectorOn, setLightDetectorOn] = useState('False')
 
   const handleOnChange = e => {
     const { name, value } = e.target
@@ -180,11 +180,11 @@ const Create = () => {
     }
 
     const res = await createSciPlan(body)
-    // if (res.status != 200) {
-    //   alert('Something went wrong, please try again')
-    //   return
-    // }
-    // alert('Create Science Plan: Success')
+    if (res.status != 200) {
+      alert('Something went wrong, please try again')
+      return
+    }
+    alert('Create Science Plan: Success')
     // window.location.href = '/create'
   }
 
