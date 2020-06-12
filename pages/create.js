@@ -170,13 +170,13 @@ const Create = () => {
           make: observingProgram.lens.make,
           model: observingProgram.lens.model,
           manufacturer: observingProgram.lens.manufacturer,
-          year: observingProgram.lens.year
+          year: parseInt(observingProgram.lens.year)
         },
-        filter: [...observingProgram.filter]
+        filter: [...observingProgram.filter],
+        specialEquipment: [...specialEquipment],
+        lightDetectorOn: lightDetectorOn.toLowerCase() == 'true' ? true : false,
+        exposures: [...exposures],
       },
-      specialEquipment: [...specialEquipment],
-      exposures: [...specialEquipment],
-      lightDetectorOn: lightDetectorOn.toLowerCase() == 'true' ? true : false
     }
 
     const res = await createSciPlan(body)
@@ -230,7 +230,7 @@ const Create = () => {
     {type: 'text', placeholder: 'Make', value: observingProgram.lens.make, set: 'make'},
     {type: 'text', placeholder: 'Model', value: observingProgram.lens.model, set: 'model'},
     {type: 'text', placeholder: 'Manufacturer', value: observingProgram.lens.manufacturer, set: 'manufacturer'},
-    {type: 'date', placeholder: 'Year', value: observingProgram.lens.year, set: 'year', label: 'Year'},
+    {type: 'number', placeholder: 'Year', value: observingProgram.lens.year, set: 'year'},
   ].map(o => {
     o.key = `create-science-plan-form-${o.set}`
     return o
